@@ -1,7 +1,11 @@
 import React from 'react';
 import { ArrowRight, Shield, Zap, Users } from 'lucide-react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import "../styles/hero.css";
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="inicio" className="relative bg-gradient-to-br from-[#009EE3] to-[#0066CC] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
@@ -18,13 +22,11 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-[#009EE3] px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-200 transform hover:scale-105 shadow-lg flex items-center justify-center space-x-2">
+              <NavLink to="/productos"
+              className="bg-white text-[#009EE3] px-8 py-4 rounded-lg font-bold transition-all duration-200 transform flex items-center justify-center space-x-2 button_ver_productos"> 
                 <span>Ver Productos</span>
                 <ArrowRight className="h-5 w-5" />
-              </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-[#009EE3] transition-all duration-200">
-                Solicitar Cotización
-              </button>
+              </NavLink>
             </div>
 
             <div className="grid grid-cols-3 gap-8 pt-8 border-t border-blue-300">
@@ -50,15 +52,7 @@ const Hero: React.FC = () => {
                 alt="Terminal Point" 
                 className="rounded-lg shadow-lg w-full h-64 object-cover"
               />
-              <div className="mt-6 space-y-2">
-                <div className="flex items-center justify-between text-sm">
-                  <span>Procesamiento diario</span>
-                  <span className="font-semibold">$50,000+</span>
-                </div>
-                <div className="bg-white/20 rounded-full h-2">
-                  <div className="bg-white rounded-full h-2 w-3/4"></div>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>

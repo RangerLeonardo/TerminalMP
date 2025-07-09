@@ -1,0 +1,5 @@
+.button_ver_productos:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 10px white;
+    font-weight: bold;
+}
